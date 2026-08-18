@@ -22,7 +22,7 @@ def get_player_count():
     enter.destroy()
 
     for each in players:
-        label = tk.Entry(root, textvariable=tk.StringVar(value=f"Player {each+1}: {morphs[each]}"), state="readonly", bd=0, fg="white",readonlybackground=root.cget("bg"), font=("Arial", 12))
+        label = tk.Entry(root, textvariable=tk.StringVar(value=morphs[each]), state="readonly", bd=0, fg="white",readonlybackground=root.cget("bg"), font=("Arial", 12))
         label.pack(pady=5, fill="x")
 
     root.update_idletasks()
