@@ -3,32 +3,35 @@ import tkinter as tk
 from data import random_mob
 
 def get_player_count():
-    player_count = int(entry_box.get())
+    try:
+        player_count = int(entry_box.get())
 
-    players = []
+        players = []
 
-    for i in range(player_count):
-        players.append(i)
+        for i in range(player_count):
+            players.append(i)
 
-    morphs = []
+        morphs = []
 
-    for each in players:
-        variant = ran.choice(random_mob())
-        morphs.append((variant))
+        for each in players:
+            variant = ran.choice(random_mob())
+            morphs.append((variant))
 
 
-    question.pack_forget()
-    entry_box.pack_forget()
-    enter.pack_forget()
+        question.pack_forget()
+        entry_box.pack_forget()
+        enter.pack_forget()
 
-    for each in players:
-        label = tk.Entry(root, textvariable=tk.StringVar(value=morphs[each]), state="readonly", bd=0, fg="#FFFFFF",readonlybackground=root.cget("bg"), font=("Arial", 12))
-        label.pack(pady=5, fill="x")
+        for each in players:
+            label = tk.Entry(root, textvariable=tk.StringVar(value=morphs[each]), state="readonly", bd=0, fg="#FFFFFF",readonlybackground=root.cget("bg"), font=("Arial", 12))
+            label.pack(pady=5, fill="x")
 
-    done = tk.Button(root, text="Done", command=lambda: run())
-    done.pack(pady=10)
+        done = tk.Button(root, text="Done", command=lambda: run())
+        done.pack(pady=10)
 
-    root.update_idletasks()
+        root.update_idletasks()
+        
+    except: None
 
 def run():
     global question, entry_box, enter
