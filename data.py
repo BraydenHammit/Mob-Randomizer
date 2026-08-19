@@ -13,6 +13,9 @@ def random_mob():
 
     villager_biomes = ["plains", "desert", "savanna", "taiga", "snow", "swamp", "jungle"]
 
+    cats = ['black', 'british', 'calico', 'jellie', 'persian', 'ragdoll', 'red', 'siamese', 'tabby', 'tuxedo', 'white']
+    wolves = ['ashen', 'black', 'chestnut', 'pale', 'rusty', 'snowy', 'spotted', 'striped', 'woods']
+
     horse_markings = ["black_dots","none","white_dots","white_details","white_fields"]
     horse_bases=["white","creamy","chestnut","brown","black","gray","dark_brown"]
 
@@ -122,7 +125,7 @@ def random_mob():
         "bogged": ['"minecraft:bogged[sheared=false]"', '"minecraft:bogged[sheared=true]"'],
         "breeze": ['"minecraft:breeze[]"'],
         "camel": ['"minecraft:camel[age=adult]"', '"minecraft:camel[age=baby]"'],
-        "cat": ['uhhh, a cat?'], #Unfinished
+        "cat": [f'"minecraft:cat[age={ran.choice(["adult","baby"])},tame={ran.choice(["true","false"])},breed={ran.choice(cats)}]"'],
         "cave_spider": ['"minecraft:cave_spider[]"'],
         "chicken": [f'"minecraft:chicken[age={ran.choice(["adult","baby"])},climate={ran.choice(climates)}]"'],
         "cod": ['"minecraft:cod[]"'],
@@ -189,7 +192,7 @@ def random_mob():
         "witch": ['"minecraft:witch[]"'],
         "wither": ['"minecraft:wither[]"'],
         "wither_skeleton": ['"minecraft:wither_skeleton[]"'],
-        "wolf": ['uhhh a wolf?'], #Unfinished
+        "wolf": [f'"minecraft:wolf[age={ran.choice(["adult","baby"])},tame={ran.choice(["true","false"])},breed={ran.choice(wolves)}]"'],
         "zoglin": ['"minecraft:zoglin[age=adult]"', '"minecraft:zoglin[age=baby]"'],
         "zombie": ['"minecraft:zombie[age=adult]"', '"minecraft:zombie[age=baby]"'],
         "zombie_horse": ['"minecraft:zombie_horse[age=adult]"', '"minecraft:zombie_horse[age=baby]"'],
