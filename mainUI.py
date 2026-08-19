@@ -51,7 +51,7 @@ root.configure(bg="#343434")
 
 show_quotes = tk.BooleanVar(value=False)
 
-question = tk.Label(root, text="How many player_count are there?")
+question = tk.Label(root, text="How many players are there?")
 question.pack(pady=10)
 entry_box = tk.Entry(root, width=30)
 entry_box.pack(pady=10)
